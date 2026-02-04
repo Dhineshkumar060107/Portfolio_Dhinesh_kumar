@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>DHINESHKUMAR.L | Student Portfolio</title>
@@ -198,6 +200,11 @@
 }
 
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 
 
 
@@ -386,13 +393,23 @@
 }
 
     /* Projects Grid */
-    .projects-grid {
+    /* .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
       gap: 2.5rem;
       max-width: 1400px;
       margin: 0 auto;
-    }
+    } */
+
+ .projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+
 
     .project-card {
       background: var(--dark-2);
@@ -511,15 +528,70 @@
       transform: translateY(-4px);
     }
 
-    @media (max-width: 768px) {
+    /* @media (max-width: 768px) {
       .nav-links { display: none; }
       .timeline::before { left: 30px; }
       .edu-content, .skill-content {
         width: 100% !important;
         margin-left: 70px !important;
-        margin-right: 0 !important;
-      }
-    }
+        margin-right: 0 !important; */
+
+    @media (max-width: 768px) {
+  .nav-links { display: none; }
+
+  .timeline::before {
+    left: 20px;
+  }
+
+  .edu-content,
+  .skill-content {
+    width: calc(100% - 40px) !important;
+    margin-left: 40px !important;
+    margin-right: 0 !important;
+  }
+}
+
+
+
+
+      @media (max-width: 600px) {
+
+  section {
+    padding: 6rem 5%;
+  }
+
+  .hero {
+    padding-top: 6rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-card {
+    width: 100%;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .project-content p {
+    font-size: 0.95rem;
+  }
+
+}
+
+      
+    
   </style>
 </head>
 <body>
